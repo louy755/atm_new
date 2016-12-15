@@ -56,14 +56,11 @@ class AccountsController < ApplicationController
   def transaction_list
     @account = Account.find(params[:id])
     @transactions = @account.transactions
-    
-  
-        #pdf = TransactionsList.new(@transactions)
-  
+    pdf = TransactionsList.new(@transactions)
     respond_to do |format|
       format.html
       format.pdf do
-       # send_data pdf.render , filename: 'transactions_list.pdf', type:'application/pdf', disposition: "inline"
+        send_data pdf.render , filename: 'transactions_list.pdf', type:'application/pdf', disposition: "inline"
       end
     end
   end
