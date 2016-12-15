@@ -1,0 +1,2 @@
+ #<%=link_to 'transactions  ',  transaction_list_account_path(current_user.account), class:"btn btn-info btn-lg" %> &nbsp;
+ --------------------------------------------------------------------------showhtmlerbatm_machsview

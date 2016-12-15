@@ -1,0 +1,82 @@
+<%= form_for(@user_info) do |f| %>
+    <% if @user_info.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user_info.errors.count, "error") %> prohibited this user_info from being saved:</h2>
+  
+        <ul>
+        <% @user_info.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    
+    
+    
+
+
+<div class="col-md-9 col-md-offset-1">
+
+    <table class="table table-striped containe   text-left   " >
+              
+              <tr>
+                <td>
+                  <div class="field">
+                    <%= f.label :first_name %>
+                    <%= f.text_field :first_name ,class:"form-control"%>
+                  </div>
+                </td>        
+                  
+                  
+                <td>
+                  <div class="field">
+                    <%= f.label :last_name %>
+                    <%= f.text_field :last_name ,class:"form-control"%>
+                  </div>
+                </td>
+              </tr>         
+              
+              <tr>
+                
+                
+                <td>         
+                  <div class="field">
+                    <%= f.label :phone %>
+                    <%= f.text_field :phone,class:"form-control" %>
+                  </div>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>         
+                  <div class="field">
+                    <%= f.label :city %>
+                    <%= f.text_field :city,class:"form-control" %>
+                  </div>
+                </td>
+                
+                <td>           
+                  <div class="field">
+                    <%= f.label :state %>
+                    <%= f.text_field :state,class:"form-control" %>
+                  </div>
+                </td>
+              </tr>
+              
+              
+              <tr>
+                <td>    
+                  <div class="actions">
+                    <%= f.submit 'Update', class:"btn btn-info  "%>
+                    </div>
+                </td>
+              </tr>
+
+    </table>
+</div>
+
+          <div class="field">
+              <%=f.hidden_field :user_id, value: current_user.id %>
+          </div>
+
+<% end %>

@@ -1,0 +1,24 @@
+<%= form_for(@atm_mach) do |f| %>
+  <% if @atm_mach.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@atm_mach.errors.count, "error") %> prohibited this atm_mach from being saved:</h2>
+
+      <ul>
+      <% @atm_mach.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

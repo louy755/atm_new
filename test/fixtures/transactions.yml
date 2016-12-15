@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 
+  merchent_name: MyString
+  debit: false
+  account_id: 
+
+two:
+  amount: 
+  merchent_name: MyString
+  debit: false
+  account_id: 
