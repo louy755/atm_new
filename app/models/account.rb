@@ -2,7 +2,7 @@ class Account < ActiveRecord::Base
   belongs_to :user
   has_many :transactions
   
-  attr_accessor :amount
+  attr_accessor :amount, :image, :name
   
   
   def deposit(i)
@@ -17,7 +17,7 @@ class Account < ActiveRecord::Base
         return false 
       else
         self.balance = balance.to_f + i[:amount].to_f
-        self.save        # 
+        self.save        
         return true
       end
     end

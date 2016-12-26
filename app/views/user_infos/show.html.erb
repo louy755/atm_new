@@ -1,6 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  
+<strong>Person Picture:</strong><br>
+  <%= image_tag @user_info.image_url(:thumb), class:"img-thumbnail" if @user_info.image? %>
+  
+</p>
+
+<p>
   <strong>First name:</strong>
   <%= @user_info.first_name %>
 </p>

@@ -6,6 +6,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
 gem 'prawn', '~> 2.1'
 gem 'prawn-table','~>0.1.0'
+gem 'carrierwave'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record

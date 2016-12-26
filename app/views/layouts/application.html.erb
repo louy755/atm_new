@@ -24,12 +24,10 @@
         <%else%>
         
         
-       <%= link_to "Please Sign Up" , new_user_registration_path   %> or <%= link_to "Sign In " , new_user_session_path %>
+       <%= link_to "Please Sign Up" , new_user_registration_path   %> | <%= link_to "Sign In " , new_user_session_path %>
         <%end%>
     </div>
   
-  
-  <!---->
     <% if notice.present? %>
 			  <div class="alert alert-info" id="flash_message" style="text-align: center">
 			  	<button class="close" data-dismiss="alert"><i class="fa fa-times"></i></button>
