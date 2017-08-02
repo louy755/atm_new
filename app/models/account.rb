@@ -30,7 +30,7 @@ class Account < ActiveRecord::Base
       return false
     else
       if (self.balance.to_f  - i[:amount].to_f < 0.0 )
-        errors.add(:CAN," ماكو هيج بطه تلعب شناو      ")                   #NOT WITHDRAWAL MORE THAN THE AVAILABLE BALANCE
+        errors.add(:CAN," ماكو هيج بطه تلعب شناو      ")                   #NO WITHDRAWAL MORE THAN THE AVAILABLE BALANCE
         return false
       else
         if ((Transaction.where("account_id =? and created_at>=? and debit=?",id,t,false).sum(:amount).to_f)+i[:amount].to_f) > 500
